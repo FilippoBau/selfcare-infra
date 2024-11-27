@@ -4,7 +4,7 @@ data "azurerm_resource_group" "resource_group" {
 
 
 module "azdoa_custom_image" {
-  source              = "git::https://github.com/pagopa/terraform-azurerm-v3.git//azure_devops_agent_custom_image?ref=v6.20.0"
+  source              = "git::https://github.com/pagopa/terraform-azurerm-v3.git//azure_devops_agent_custom_image?ref=v6.20.2"
   resource_group_name = data.azurerm_resource_group.resource_group.name
   location            = var.location
   image_name          = "${local.project}-azdo-agent-ubuntu2204-image"
